@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday Abgg 🫰🏻</title>
+<style>
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif}
+body{background:radial-gradient(circle at 50% 15%,#fff8d9 0,#f9d78e 35%,#d99158 100%);color:#4b2d22;overflow-x:hidden}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.card{width:min(92vw,430px);padding:28px 22px 30px;text-align:center;background:rgba(255,250,239,.82);border:1px solid rgba(255,255,255,.7);border-radius:30px;box-shadow:0 20px 60px rgba(92,45,20,.22);backdrop-filter:blur(10px);position:relative;z-index:2}
+.small{font:600 12px/1.4 Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;opacity:.62;margin-bottom:12px}
+h1{font-size:clamp(30px,9vw,48px);line-height:1.08;margin:0 0 8px;font-weight:700}
+.sub{font-size:18px;margin:0 0 20px}
+.photo{width:190px;height:190px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 22px;border:7px solid rgba(255,255,255,.82);box-shadow:0 12px 35px rgba(80,38,18,.25)}
+.message{font-size:17px;line-height:1.75;margin:0 auto 22px;max-width:330px}
+.message b{font-size:19px}
+button{border:0;border-radius:999px;padding:13px 20px;background:#6f3d2b;color:white;font:600 14px Arial,sans-serif;box-shadow:0 8px 20px rgba(80,38,18,.2);cursor:pointer}
+.note{font:12px/1.5 Arial,sans-serif;opacity:.55;margin-top:12px}
+.heart{position:fixed;font-size:22px;opacity:.35;animation:float 7s linear infinite;z-index:1}
+.h1{left:8%;bottom:-30px}.h2{left:78%;bottom:-40px;animation-delay:2s}.h3{left:48%;bottom:-35px;animation-delay:4s}
+@keyframes float{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="heart h1">🫰🏻</div><div class="heart h2">🤍</div><div class="heart h3">🫰🏻</div>
+<main class="wrap">
+<section class="card">
+<div class="small">a little birthday message</div>
+<h1>happy birthday abgg 🫰🏻</h1>
+<p class="sub">moga cepat jadi chip hahaha</p>
+<img class="photo" src="abgg.jpg" alt="Foto Abgg">
+<p class="message">
+  Semoga di umur yang baru ini banyak hal baik yang datang,
+  urusannya dimudahkan, sehat terus, dan apa yang diinginkan
+  pelan-pelan bisa tercapai. 🤍<br><br>
+  <b>Have a good one, Abgg.</b>
+</p>
+<button id="musicBtn">♪ Putar Best Part</button>
+<div class="note" id="note">Kalau file lagunya sudah ditambahkan, tombol ini akan memutarnya.</div>
+<audio id="music" src="best-part.mp3" preload="none"></audio>
+</section>
+</main>
+<script>
+const btn=document.getElementById('musicBtn'), music=document.getElementById('music'), note=document.getElementById('note');
+btn.addEventListener('click', async ()=>{
+  try{
+    if(music.paused){await music.play();btn.textContent='Ⅱ Pause Best Part';note.textContent='Best Part sedang diputar 🤍';}
+    else{music.pause();btn.textContent='♪ Putar Best Part';note.textContent='';}
+  }catch(e){
+    note.textContent='File best-part.mp3 belum ada. Upload file lagumu ke folder yang sama dengan website ini.';
+  }
+});
+</script>
+</body>
+</html>
